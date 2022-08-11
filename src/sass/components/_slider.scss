@@ -82,7 +82,8 @@
 
 	/* for larger screens */
 	@include mixins.mq(large) {
-		grid-template-columns: 3fr 2fr;
+		/* get image size for first column(?) and first column to image max width(?) */
+		grid-template-columns: minmax(0, max-content) 2fr;
 
 		&__content {
 			grid-row: 1;

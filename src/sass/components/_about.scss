@@ -5,8 +5,7 @@
 
 	@include mixins.mq(small) {
 		display: grid;
-		grid-template-columns: 3fr 4fr 3fr;
-		grid-auto-rows: fit-content;
+		grid-auto-flow: column;
 	}
 
 	&__header {
