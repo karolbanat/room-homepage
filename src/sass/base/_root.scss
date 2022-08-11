@@ -10,6 +10,7 @@
 	}
 
 	// font families
+	--ff-primary: 'League Spartan', sans-serif;
 
 	// font wieghts
 	@each $font-weight, $value in variables.$font-weights {
@@ -29,11 +30,6 @@
 				}
 			}
 		}
-	}
-
-	// border radius
-	@each $radius, $value in variables.$border-radius {
-		--borr-#{$radius}: #{$value};
 	}
 
 	// spacings
