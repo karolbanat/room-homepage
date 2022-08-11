@@ -34,6 +34,9 @@ const slides = [
 	},
 ];
 
+let touchStartX, touchEndX;
+const SWIPE_TOUCH_MIN_RANGE = 100; // for not changing slide if small swipe
+
 const main = () => {
 	prepareDOMElements();
 	prepareDOMEvents();
@@ -58,6 +61,16 @@ const prepareDOMEvents = () => {
 	toggleBtn.addEventListener('click', handleMobileNav);
 	sliderButtonLeft.addEventListener('click', slideLeft);
 	sliderButtonRight.addEventListener('click', slideRight);
+
+	/* swiping handling */
+	slider.addEventListener('touchstart', (e) => {
+		touchStartX = e.changedTouches[0].screenX;
+	});
+
+	slider.addEventListener('touchend', handleSwipeEnd);
+
+	/* left and right key handling */
+	slider.addEventListener('keydown', handleKeyboardSliding);
 };
 
 /* navigation handling */
@@ -125,6 +138,32 @@ const updateSlideContent = (heading, description) => {
 	setTimeout(() => {
 		sliderContentContainer.classList.remove('fade-in-right');
 	}, 800);
+};
+
+/* on swipe */
+const handleSwipeEnd = (e) => {
+	touchEndX = e.changedTouches[0].screenX;
+	const direction = getDirection();
+	if (Math.abs(direction) < SWIPE_TOUCH_MIN_RANGE) return;
+	direction < 0 ? slideLeft() : direction > 0 ? slideRight() : null;
+};
+
+const getDirection = () => {
+	return touchEndX - touchStartX;
+};
+
+/* sliding with arrow keys */
+const handleKeyboardSliding = (e) => {
+	const key = e.keyCode;
+	if (key === 37) {
+		slideLeft();
+		return;
+	}
+
+	if (key === 39) {
+		slideRight();
+		return;
+	}
 };
 
 document.addEventListener('DOMContentLoaded', main);
