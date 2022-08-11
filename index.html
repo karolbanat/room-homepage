@@ -24,18 +24,87 @@
 </head>
 
 <body>
-    Home
-    Shop
-    About
-    Contact
 
-    Discover innovative ways to decorate
+    <header class="primary-header">
+        <nav class="navigation">
+            <button aria-expanded="false"
+                    aria-controls="primary-nav"
+                    aria-label="Menu"
+                    class="navigation__toggle-btn">
+                <img src="./dist/images/icon-hamburger.svg"
+                     alt="">
+                <img src="./dist/images/icon-close.svg"
+                     alt="">
+            </button>
+            <img src="./dist/images/logo.svg"
+                 alt="Room logo">
+            <div id="primary-nav"
+                 class="navigation__nav">
+                <ul class="navigation__nav-links">
+                    <li><a href="#"
+                           class="navigation__link">home</a></li>
+                    <li><a href="#"
+                           class="navigation__link">shop</a></li>
+                    <li><a href="#"
+                           class="navigation__link">about</a></li>
+                    <li><a href="#"
+                           class="navigation__link">contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    We provide unmatched quality, comfort, and style for property owners across the country.
-    Our experts combine form and function in bringing your vision to life. Create a room in your
-    own style with our collection and make your property a reflection of you and what you love.
+        <div class="slider">
+            <div class="slider__image-container">
+                <img src="./dist/images/mobile-image-hero-1.jpg"
+                     alt="White chairs and table with wooden parts. Small tree on the table."
+                     data-slider-image-display="mobile"
+                     class="slider__image slider__image--mobile">
+                <img src="./dist/images/desktop-image-hero-1.jpg"
+                     alt="White chairs and table with wooden parts. Small tree on the table."
+                     data-slider-image-display="desktop"
+                     class="slider__image slider__image--desktop">
+            </div>
+            <article class="slider__content | flow">
+                <h1 class="slider__heading">Discover innovative ways to decorate</h1>
+                <p>We provide unmatched quality, comfort, and style for property owners across the country.
+                    Our experts combine form and function in bringing your vision to life. Create a room in your
+                    own style with our collection and make your property a reflection of you and what you love.</p>
+                <a href="#"
+                   class="link">Shop now <img src="./dist/images/icon-arrow.svg"
+                         alt=""></a>
+            </article>
+            <div class="slider__controls">
+                <button aria-label="Slide left"
+                        class="slider__control-button slider__control-button--left">
+                    <img src="./dist/images/icon-angle-left.svg"
+                         alt="">
+                </button>
+                <button aria-label="Slide right"
+                        class="slider__control-button slider__control-button--right">
+                    <img src="./dist/images/icon-angle-right.svg"
+                         alt="">
+                </button>
+            </div>
+        </div>
+    </header>
 
-    Shop now
+    <main>
+        <section aria-labelledby="about-heading"
+                 class="about">
+            <img src="./dist/images/image-about-dark.jpg"
+                 alt="Black chairs with small, round coffee table. Bed in the background.">
+            <header class="about__header | flow">
+                <h2 id="about-heading"
+                    class="section-heading">About our furniture</h2>
+                <p>Our multifunctional collection blends design and function to suit your individual taste.
+                    Make each room unique, or pick a cohesive theme that best express your interests and what
+                    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                    or anything in between. Product specialists are available to help you create your dream space.</p>
+            </header>
+            <img src="./dist/images/image-about-light.jpg"
+                 alt="White chair on the white background.">
+        </section>
+    </main>
 
     <!-- We are available all across the globe
 
@@ -52,13 +121,6 @@
     experience in this industry, we understand what customers want for their home and office.
 
     Shop now -->
-
-    About our furniture
-
-    Our multifunctional collection blends design and function to suit your individual taste.
-    Make each room unique, or pick a cohesive theme that best express your interests and what
-    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-    or anything in between. Product specialists are available to help you create your dream space.
 
 </body>
 
