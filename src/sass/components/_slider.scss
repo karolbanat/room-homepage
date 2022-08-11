@@ -5,15 +5,15 @@
 
 	/* content elements */
 	&__content {
-		--padding-block-min: var(--spacing-rem-800);
-		--padding-block-max: calc(2 * var(--spacing-rem-800));
-		--padding-block: clamp(var(--padding-block-min), 10vw, var(--padding-block-max));
+		--padding-block: var(--spacing-rem-800);
 		--padding-inline-min: var(--spacing-rem-500);
 		--padding-inline-max: var(--spacing-rem-900);
 		--padding-inline: clamp(var(--padding-inline-min), 8vw, var(--padding-inline-max));
 
 		grid-row: 2;
 		grid-column: 1;
+		display: grid;
+		align-content: center;
 		padding-block: var(--padding-block);
 		padding-inline: var(--padding-inline);
 	}

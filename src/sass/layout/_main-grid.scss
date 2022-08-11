@@ -1,0 +1,10 @@
+@use '../base/mixins';
+
+.main-grid {
+	min-height: 100vh;
+
+	@include mixins.mq(large) {
+		display: grid;
+		grid-template-rows: 2fr 1fr;
+	}
+}
