@@ -12,5 +12,5 @@ h3 {
 }
 
 :where(p:not([class])) {
-	color: var(--clr-neutral-400);
+	color: var(--clr-primary-400);
 }

@@ -1,0 +1,14 @@
+.primary-header {
+	display: grid;
+
+	/* put nav on the slider */
+	& > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	/* and align navigation to top */
+	&__navigation {
+		align-self: start;
+	}
+}

@@ -1,5 +1,12 @@
 @use './base/root';
 @use './base/reset';
 @use './base/base';
+@use './base/animations';
+
+@use './components/toggle-btn';
+@use './components/link';
+@use './components/primary-header';
+@use './components/navigation';
+@use './components/slider';
 
 @use './utility/flow';

@@ -1,0 +1,17 @@
+.link {
+	--text: var(--clr-primary-900);
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-em-300);
+	font-size: var(--fz-300);
+	letter-spacing: 1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--text);
+	transition: color 0.35s ease;
+
+	&:hover,
+	&:focus-visible {
+		--text: var(--clr-primary-400);
+	}
+}

@@ -26,15 +26,17 @@
 <body>
 
     <header class="primary-header">
-        <nav class="navigation">
+        <nav class="navigation primary-header__navigation">
             <button aria-expanded="false"
                     aria-controls="primary-nav"
                     aria-label="Menu"
-                    class="navigation__toggle-btn">
+                    class="toggle-btn navigation__toggle-btn">
                 <img src="./dist/images/icon-hamburger.svg"
-                     alt="">
+                     alt=""
+                     class="toggle-btn__icon-open">
                 <img src="./dist/images/icon-close.svg"
-                     alt="">
+                     alt=""
+                     class="toggle-btn__icon-close">
             </button>
             <img src="./dist/images/logo.svg"
                  alt="Room logo">
@@ -42,18 +44,18 @@
                  class="navigation__nav">
                 <ul class="navigation__nav-links">
                     <li><a href="#"
-                           class="navigation__link">home</a></li>
+                           class="navigation__nav-link">home</a></li>
                     <li><a href="#"
-                           class="navigation__link">shop</a></li>
+                           class="navigation__nav-link">shop</a></li>
                     <li><a href="#"
-                           class="navigation__link">about</a></li>
+                           class="navigation__nav-link">about</a></li>
                     <li><a href="#"
-                           class="navigation__link">contact</a></li>
+                           class="navigation__nav-link">contact</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div class="slider">
+        <div class="slider primary-header__slider">
             <div class="slider__image-container">
                 <img src="./dist/images/mobile-image-hero-1.jpg"
                      alt="White chairs and table with wooden parts. Small tree on the table."
@@ -122,6 +124,7 @@
 
     Shop now -->
 
+    <script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>
